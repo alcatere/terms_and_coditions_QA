@@ -19,7 +19,7 @@ This project implements a **Retrieval-Augmented Generation (RAG)** system using 
 ## 🚀 Live Demo
 
 > Will appear here once deployed:  
-`https://<your-streamlit-app-url>.streamlit.app`
+`https://rag-terms-and-conditions.streamlit.app`
 
 ---
 
