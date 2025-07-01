@@ -11,8 +11,8 @@ from sentence_transformers import SentenceTransformer
 # ---- CONFIG ----
 st.set_page_config(page_title="RAG Q&A Assistant", layout="wide")
 MODEL_ID = "google/gemma-2b-it"
-#DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 ENCODING = tiktoken.get_encoding("cl100k_base")
 
 # ---- LOAD MODELS ----
