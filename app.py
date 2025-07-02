@@ -8,9 +8,13 @@ import tiktoken
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from sentence_transformers import SentenceTransformer
 
+# ---- HUGGING FACE AUTHENTICATION ----
+# Secreto plano
+HF_TOKEN = st.secrets["HF_TOKEN"]
+
 # Login to Hugging Face Hub (if needed)
 from huggingface_hub import login
-login(new_session=False)
+login(token=HF_TOKEN)
 
 # ---- CONFIG ----
 st.set_page_config(page_title="RAG Q&A Assistant", layout="wide")
