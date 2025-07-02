@@ -1,9 +1,0 @@
-streamlit
-torch
-transformers
-sentencepiece
-faiss-cpu
-pdfplumber
-python-docx
-sentence-transformers
-tiktoken
