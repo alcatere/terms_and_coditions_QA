@@ -8,6 +8,10 @@ import tiktoken
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from sentence_transformers import SentenceTransformer
 
+
+import os
+os.environ["WATCHFILES_DISABLE"] = "true"
+
 # # ---- HUGGING FACE AUTHENTICATION ----
 # # Secreto plano
 # HF_TOKEN = st.secrets["HF_TOKEN"]
