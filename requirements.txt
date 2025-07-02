@@ -7,3 +7,4 @@ pdfplumber
 python-docx
 sentence-transformers
 tiktoken
+huggingface_hub
