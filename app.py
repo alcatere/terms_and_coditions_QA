@@ -8,19 +8,23 @@ import tiktoken
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from sentence_transformers import SentenceTransformer
 
-# ---- HUGGING FACE AUTHENTICATION ----
-# Secreto plano
-HF_TOKEN = st.secrets["HF_TOKEN"]
+# # ---- HUGGING FACE AUTHENTICATION ----
+# # Secreto plano
+# HF_TOKEN = st.secrets["HF_TOKEN"]
 
-# Login to Hugging Face Hub (if needed)
-from huggingface_hub import login
-login(token=HF_TOKEN)
+# # Login to Hugging Face Hub (if needed)
+# from huggingface_hub import login
+# login(token=HF_TOKEN)
 
 # ---- CONFIG ----
 st.set_page_config(page_title="RAG Q&A Assistant", layout="wide")
-MODEL_ID = "google/gemma-2b-it"
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+
+# MODEL_ID = "google/gemma-2b-it"
+# MODEL_ID = "microsoft/phi-2"
+MODEL_ID = "tiiuae/falcon-rw-1b"
+
+#DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 ENCODING = tiktoken.get_encoding("cl100k_base")
 
 # ---- LOAD MODELS ----
